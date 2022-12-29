@@ -22,7 +22,9 @@
   --accent: var(--blue);
 }
 body {
-  overflow-x: hidden;
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
 }
 
 ::-webkit-scrollbar {
