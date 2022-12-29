@@ -45,8 +45,6 @@ body {
   width: 100vw;
   display: flex;
   flex-direction: column;
-  grid-gap: 5rem;
-  gap: 5rem;
   overflow-y: scroll;
 }
 .navbar {
