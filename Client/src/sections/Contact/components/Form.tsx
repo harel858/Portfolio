@@ -66,7 +66,9 @@ const Form: React.FC = () => {
     const user = new User(name, email, message);
     const config = {
       withCredentials: true,
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+      },
     };
 
     try {
