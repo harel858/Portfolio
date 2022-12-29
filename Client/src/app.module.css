@@ -45,7 +45,6 @@ body {
 .main {
   display: flex;
   flex-direction: column;
-  overflow-y: scroll;
 }
 .navbar {
   position: fixed;

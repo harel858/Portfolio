@@ -7,6 +7,7 @@ import { IParallax } from "@react-spring/parallax";
 type currentRef = {
   currentRef: React.RefObject<IParallax>;
   toggle: any;
+  isOpen: boolean;
 };
 type ItemObj = [
   { section: string },
@@ -31,7 +32,11 @@ const itemsObj: ItemObj = [
 ];
 
 export const Navigation = (props: currentRef) => (
-  <motion.ul className={classes.ul} variants={variants}>
+  <motion.ul
+    style={!props.isOpen ? { display: `none` } : { display: `flex` }}
+    className={classes.ul}
+    variants={variants}
+  >
     {itemsObj.map((item: {}, i: number) => (
       <MenuItem
         toggle={() => props.toggle()}

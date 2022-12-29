@@ -11,35 +11,36 @@
 .darkSkillsSections::-webkit-scrollbar {
   display: none;
 }
+.motionCard,
+.darkMotionCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
 
 .motionCard h2 {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 2em;
-  position: absolute;
-  top: 0.5em;
+  font-size: 1.5em;
 }
+
 .motionCard h4 {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 1.5em;
-  position: absolute;
-  top: 8em;
+  font-size: 1.2em;
 }
 .darkMotionCard h2 {
-  font-size: 2em;
-  position: absolute;
-  top: 0.5em;
+  font-size: 1.5em;
+
   color: white;
 }
 .darkMotionCard h4 {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 1.5em;
-  position: absolute;
+  font-size: 1.2em;
   color: white;
 }
 .motionCard .paragraph,
 .darkMotionCard .paragraph {
-  position: absolute;
-  top: 2.5em;
   text-align: center;
   font-size: clamp(1.3em, 2vw, 1.3em);
   line-height: 1.3em;
@@ -49,9 +50,7 @@
 }
 .motionCard .skill,
 .darkMotionCard .skill {
-  position: absolute;
   font-weight: 600;
-  bottom: 6em;
   font-size: 1.2em;
   max-width: 30ch;
   text-align: center;
@@ -61,7 +60,7 @@
 
 .motionCard {
   width: 300px;
-  height: 430px;
+  min-height: 25rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -81,7 +80,7 @@
   background: black;
   border: 2px solid rgb(245, 245, 220);
   border-radius: 20px;
-  box-shadow: rgb(0, 0, 0, 0.6) 10px 10px 10px 10px;
+  box-shadow: rgb(245, 245, 220, 0.2) 10px 10px 10px 10px;
   transform-origin: 10% 60%;
 }
 
@@ -91,13 +90,13 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  padding-top: 20px;
+  padding-top: inherit;
   padding-bottom: 5em;
   margin-bottom: -120px;
 }
 
 .splash {
-  position: absolute;
+  position: relative;
   bottom: 0;
   left: 0;
   right: 0;

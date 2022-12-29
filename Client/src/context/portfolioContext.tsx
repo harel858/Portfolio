@@ -21,7 +21,7 @@ export const PortfolioContextProvider: React.FC<
 
   useEffect(() => {
     if (!isOn) {
-      document.body.style.background = "beige";
+      document.body.style.background = "rgb(237, 234, 222)";
       setTheme("light");
     }
     if (isOn) {

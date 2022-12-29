@@ -143,3 +143,9 @@
   color: #ffff;
   cursor: pointer;
 }
+
+@media screen and (max-width: 1050px) {
+  .contactSection h1 {
+    font-size: 1.5em;
+  }
+}

@@ -16,7 +16,7 @@
   overflow: hidden;
   border: 3px solid black;
   box-shadow: rgba(0, 0, 0, 0.4) 10px -5px 10px 10px;
-  transform: scale(0.9);
+  transform: scale(0.8);
   transition: transform 500ms ease;
 }
 
@@ -30,7 +30,7 @@
   overflow: hidden;
   border: 1px solid black;
   box-shadow: rgb(245, 245, 220, 0.4) 10px -5px 10px 10px;
-  transform: scale(0.9);
+  transform: scale(0.8);
   transition: transform 500ms ease;
 }
 
@@ -51,7 +51,7 @@
 .card:focus-within,
 .darkCard:hover,
 .darkCard:focus-within {
-  transform: scale(1.1);
+  transform: scale(1);
 }
 
 .cardContent {
@@ -177,5 +177,11 @@
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
     transition-delay: 0ms !important;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .card:hover,
+  .darkCard:hover {
+    transform: none;
   }
 }

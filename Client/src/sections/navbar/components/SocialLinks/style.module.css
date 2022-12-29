@@ -1,12 +1,13 @@
 .linksContainer {
   position: relative;
-  margin: auto 2em;
+  margin: auto 0.5em;
   display: flex;
-  gap: 1.2em;
+  gap: 0.5em;
 }
 .icon {
   border: none;
   background-color: transparent;
+  transform: scale(0.8);
 }
 
 /* .dark div {
@@ -20,6 +21,11 @@
 
 @media screen and (max-width: 1250px) {
   .linksContainer {
-    gap: 0.5em;
+    gap: 0.1em;
+  }
+  .icon {
+    border: none;
+    background-color: transparent;
+    transform: scale(0.8);
   }
 }

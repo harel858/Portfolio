@@ -1,13 +1,13 @@
 .projectsSection,
 .darkProjectsSection {
-  margin: 4em auto;
+  margin: 1em auto;
   min-width: 90vw;
   font-family: Georgia, "Times New Roman", Times, serif !important;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 5rem;
+  gap: 1rem;
 }
 .projectsSection h1 {
   font-size: 3em;
@@ -28,18 +28,19 @@
   position: relative;
   top: 0;
   display: flex;
-  flex-direction: row-reverse;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 5em;
+  gap: 0;
 }
 .article,
 .darkArticle {
   display: flex;
+  align-self: center;
   flex-direction: column;
   justify-content: space-around;
-  gap: 3em;
+  gap: 1.5em;
 }
 .article div {
   max-width: 80vw !important;
@@ -107,4 +108,37 @@
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
+}
+
+@media screen and (max-width: 1050px) {
+  .article p {
+    font-size: 1em;
+    font-weight: 550;
+    max-width: 100%;
+    text-align: center;
+    color: white;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+  }
+  .darkArticle p {
+    font-size: 1em;
+    font-weight: 550;
+    max-width: 100%;
+    text-align: center;
+    color: black;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+  }
 }

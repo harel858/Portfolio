@@ -34,9 +34,9 @@ export const MenuItem = (props: itemProps) => {
 
   const handleClick = () => {
     if (props.i === 0) props.currentRef?.current?.scrollTo(0);
-    if (props.i === 1) props.currentRef?.current?.scrollTo(1.25);
-    if (props.i === 2) props.currentRef?.current?.scrollTo(3.2);
-    if (props.i === 3) props.currentRef?.current?.scrollTo(4.92);
+    if (props.i === 1) props.currentRef?.current?.scrollTo(2.4);
+    if (props.i === 2) props.currentRef?.current?.scrollTo(4.7);
+    if (props.i === 3) props.currentRef?.current?.scrollTo(6.95);
     return props.toggle();
   };
 

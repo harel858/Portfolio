@@ -45,7 +45,11 @@ export const Hamburger: React.FC<currentRef> = (props: currentRef) => {
       ref={containerRef}
     >
       <motion.div className={classes.background} variants={sidebar} />
-      <Navigation toggle={() => toggleOpen()} currentRef={props.currentRef} />
+      <Navigation
+        isOpen={isOpen}
+        toggle={() => toggleOpen()}
+        currentRef={props.currentRef}
+      />
       <MenuToggle toggle={() => toggleOpen()} />
     </motion.nav>
   );

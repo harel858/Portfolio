@@ -20,12 +20,12 @@ const App: React.FC = () => {
         <NavBar currentRef={ref} />
       </div>
 
-      <Parallax ref={ref} pages={6.5}>
+      <Parallax ref={ref} pages={9}>
         <ParallaxLayer
           style={
             !isOn
               ? {
-                  backgroundColor: `beige`,
+                  backgroundColor: `rgb(237, 234, 222)`,
                 }
               : {
                   backgroundColor: `black`,
@@ -33,7 +33,7 @@ const App: React.FC = () => {
           }
           speed={1}
           offset={0}
-          factor={4}
+          factor={2.5}
         >
           <About />
         </ParallaxLayer>
@@ -44,16 +44,18 @@ const App: React.FC = () => {
                   backgroundColor: `#0072b1`,
                   borderTop: ` 1px solid black`,
                   borderBottom: `1px solid black`,
+                  minHeight: `80rem`,
                 }
               : {
                   backgroundColor: `#0072b1`,
                   borderTop: ` 1px solid beige`,
                   borderBottom: `1px solid beige`,
+                  minHeight: `80rem`,
                 }
           }
           speed={0.05}
-          factor={1.9}
-          offset={1.4}
+          factor={1}
+          offset={2.5}
         >
           <Skills />
         </ParallaxLayer>
@@ -61,15 +63,17 @@ const App: React.FC = () => {
           style={
             !isOn
               ? {
-                  backgroundColor: `beige`,
+                  backgroundColor: `rgb(237, 234, 222)`,
+                  minHeight: `fit-content`,
                 }
               : {
                   backgroundColor: `black`,
+                  minHeight: `fit-content`,
                 }
           }
           speed={0.05}
-          factor={3}
-          offset={3.25}
+          factor={1}
+          offset={4.8}
         >
           <Projects />
         </ParallaxLayer>
@@ -80,16 +84,18 @@ const App: React.FC = () => {
                   backgroundColor: `#0072b1`,
                   borderTop: ` 1px solid black`,
                   borderBottom: `1px solid black`,
+                  minHeight: `fit-content`,
                 }
               : {
                   backgroundColor: `#0072b1`,
                   borderTop: ` 1px solid beige`,
                   borderBottom: `1px solid beige`,
+                  minHeight: `fit-content`,
                 }
           }
           speed={0.5}
-          factor={2}
-          offset={5}
+          factor={3}
+          offset={7}
         >
           <Contact />
           <Footer />
