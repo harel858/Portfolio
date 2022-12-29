@@ -75,7 +75,9 @@ const Form: React.FC = () => {
       setNewUser(result.data);
       setSuccessMessage(true);
     } catch (err: any) {
-      setRegisterError(err.response.data);
+      setRegisterError(
+        err.response.data ? err.response.data : `error occurs, we on this...`
+      );
       setErrorMessage(true);
       throw new Error(err);
     }
