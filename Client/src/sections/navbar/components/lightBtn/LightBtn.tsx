@@ -1,7 +1,7 @@
+import classes from "./styles.module.css";
 import React, { useContext } from "react";
 import PortfolioContext from "../../../../context/portfolioContext";
 import { motion } from "framer-motion";
-import classes from "./styles.module.css";
 import { BsFillSunFill, BsMoonFill } from "react-icons/bs";
 import { Slide } from "react-awesome-reveal";
 

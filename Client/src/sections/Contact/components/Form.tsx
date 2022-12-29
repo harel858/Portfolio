@@ -70,14 +70,18 @@ const Form: React.FC = () => {
     };
 
     try {
-      const result = await axios.post(`http://localhost:3000`, user, config);
+      const result = await axios.post(
+        `${import.meta.env.VITE_API_KEY}`,
+        user,
+        config
+      );
       console.log(result.status);
       setNewUser(result.data);
       setSuccessMessage(true);
     } catch (err: any) {
-      setRegisterError(
-        err.response.data ? err.response.data : `error occurs, we on this...`
-      );
+      err?.response?.data
+        ? setRegisterError(err.response.data)
+        : setRegisterError(`error occurs, we on this...`);
       setErrorMessage(true);
       throw new Error(err);
     }
