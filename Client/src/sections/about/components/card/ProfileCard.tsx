@@ -13,7 +13,7 @@ const ProfileCard: React.FC<{}> = () => {
   const { isOn } = React.useContext(PortfolioContext);
 
   return (
-    <Roll className={classes.cardContainer}>
+    <Roll duration={200} className={classes.cardContainer}>
       <Card
         className={!isOn ? classes.card : classes.darkCard}
         sx={{ maxWidth: 345 }}
