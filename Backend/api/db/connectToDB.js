@@ -8,6 +8,6 @@ dotenv_1.default.config();
 const mongoose_1 = __importDefault(require("mongoose"));
 console.log(process.env.MONGOURI);
 mongoose_1.default
-    .connect(`${process.env.MONGO_URI}`)
+    .connect(`${process.env.MONGOURI}`)
     .then((x) => console.log(`connect to DB`))
     .catch((e) => console.log(e));

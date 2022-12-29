@@ -4,6 +4,6 @@ import mongoose from "mongoose";
 console.log(process.env.MONGOURI);
 
 mongoose
-  .connect(`${process.env.MONGO_URI}`)
+  .connect(`${process.env.MONGOURI}`)
   .then((x) => console.log(`connect to DB`))
   .catch((e) => console.log(e));
