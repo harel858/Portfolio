@@ -6,6 +6,8 @@ import router from "./routes/customers";
 import cors from "cors";
 import bodyParser from "body-parser";
 
+const port = process.env.PORT || 9000;
+
 const app = express();
 
 app.use(bodyParser.json());
@@ -17,6 +19,6 @@ app.use(
 );
 app.use("/", router);
 
-app.listen(process.env.PORT, () =>
+app.listen(port, () =>
   console.log(`app is listening on port ${process.env.PORT}`)
 );
