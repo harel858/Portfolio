@@ -1,0 +1,78 @@
+:root {
+  --primary: #0072b1;
+  --button-shadow: 0px 20px 24px 3px rgba(0, 114, 177, 0.6);
+}
+
+.switch {
+  background-color: rgba(255, 255, 255, 0.4);
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 2em;
+  border: 5px solid var(--primary);
+  padding: 0 2em 2em;
+  cursor: pointer;
+}
+
+.switch[data-ison="true"] {
+  justify-content: flex-end;
+}
+.darkSwitch {
+  background-color: rgba(255, 255, 255, 0.4);
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 2em;
+  border: 3px solid #fed000;
+  padding: 0 2em 2em;
+  cursor: pointer;
+}
+.darkSwitch[data-ison="true"] {
+  justify-content: flex-end;
+}
+
+.handle {
+  position: absolute;
+  padding: 1em;
+  background-color: var(--primary);
+  border-radius: 100%;
+}
+.darkHandle {
+  position: absolute;
+  padding: 1em;
+  background-color: #fed000;
+  border-radius: 100%;
+}
+.sunIcon {
+  display: block;
+  font-size: 1.5em;
+  color: var(--primary);
+  position: absolute;
+  margin: 0.2em 0 0 0.1em;
+  left: 0;
+}
+.darkSunIcon {
+  display: block;
+  font-size: 1.5em;
+  color: white;
+  position: absolute;
+  margin: 0.2em 0 0 0.1em;
+  left: 0;
+}
+
+.moonIcon {
+  display: block;
+  font-size: 1.5em;
+  color: var(--primary);
+  position: absolute;
+  margin: 0.1em 0 0 0.1em;
+  right: 0;
+}
+.darkMoonIcon {
+  display: block;
+  font-size: 1.5em;
+  color: white;
+  position: absolute;
+  margin: 0.1em 0 0 0.1em;
+  right: 0;
+}

@@ -1,0 +1,25 @@
+.linksContainer {
+  position: relative;
+  margin: auto 2em;
+  display: flex;
+  gap: 1.2em;
+}
+.icon {
+  border: none;
+  background-color: transparent;
+}
+
+/* .dark div {
+  border-radius: 50%;
+  background-color: beige !important;
+}
+ */
+.dark g:last-of-type {
+  fill: beige !important;
+}
+
+@media screen and (max-width: 1250px) {
+  .linksContainer {
+    gap: 0.5em;
+  }
+}

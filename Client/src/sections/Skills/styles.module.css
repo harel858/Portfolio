@@ -1,0 +1,108 @@
+#root {
+  margin: 100px auto;
+  max-width: 500px;
+  padding-bottom: 100px;
+}
+.skillsSections {
+  padding-bottom: 10em;
+  overflow: hidden;
+}
+.skillsSections::-webkit-scrollbar,
+.darkSkillsSections::-webkit-scrollbar {
+  display: none;
+}
+
+.motionCard h2 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 2em;
+  position: absolute;
+  top: 0.5em;
+}
+.motionCard h4 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.5em;
+  position: absolute;
+  top: 8em;
+}
+.darkMotionCard h2 {
+  font-size: 2em;
+  position: absolute;
+  top: 0.5em;
+  color: white;
+}
+.darkMotionCard h4 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.5em;
+  position: absolute;
+  color: white;
+}
+.motionCard .paragraph,
+.darkMotionCard .paragraph {
+  position: absolute;
+  top: 2.5em;
+  text-align: center;
+  font-size: clamp(1.3em, 2vw, 1.3em);
+  line-height: 1.3em;
+  font-weight: 500;
+  max-width: 25ch;
+  color: #788097;
+}
+.motionCard .skill,
+.darkMotionCard .skill {
+  position: absolute;
+  font-weight: 600;
+  bottom: 6em;
+  font-size: 1.2em;
+  max-width: 30ch;
+  text-align: center;
+  min-height: 4rem;
+  color: #0072b1;
+}
+
+.motionCard {
+  width: 300px;
+  height: 430px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border: 2px solid black;
+  border-radius: 20px;
+  box-shadow: rgb(0, 0, 0, 0.6) 10px 10px 10px 10px;
+  transform-origin: 10% 60%;
+}
+
+.darkMotionCard {
+  width: 300px;
+  height: 430px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black;
+  border: 2px solid rgb(245, 245, 220);
+  border-radius: 20px;
+  box-shadow: rgb(0, 0, 0, 0.6) 10px 10px 10px 10px;
+  transform-origin: 10% 60%;
+}
+
+.cardContainer {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 5em;
+  margin-bottom: -120px;
+}
+
+.splash {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  clip-path: path(
+    "M 0 303.5 C 0 292.454 8.995 285.101 20 283.5 L 460 219.5 C 470.085 218.033 480 228.454 480 239.5 L 500 430 C 500 441.046 491.046 450 480 450 L 20 450 C 8.954 450 0 441.046 0 430 Z"
+  );
+}

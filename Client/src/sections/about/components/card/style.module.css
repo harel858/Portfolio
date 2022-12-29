@@ -1,0 +1,25 @@
+/* .cardContainer {
+  position: relative;
+  right: 10rem;
+  top: 8rem;
+} */
+
+.card {
+  border: 1px solid black;
+  border-radius: 1em !important;
+  box-shadow: rgb(0, 0, 0, 0.6) 10px 20px 30px 3px !important;
+}
+.darkCard {
+  background-color: beige;
+  border: 1px solid black !important;
+  border-radius: 1em !important;
+  box-shadow: rgb(245, 245, 220, 0.6) 10px 20px 30px 3px !important;
+}
+
+/* @media screen and (max-width: 1250px) {
+  .cardContainer {
+    position: relative;
+    right: 10rem;
+  }
+}
+ */

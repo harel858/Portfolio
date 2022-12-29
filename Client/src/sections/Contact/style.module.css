@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+:root {
+  --primary: #0072b1;
+  --button-shadow: 0px 20px 24px 3px rgba(0, 114, 177, 0.6);
+}
+
+.contactSection {
+  font-family: "Open Sans", sans-serif !important;
+  position: relative;
+  top: 3rem;
+  min-width: 90vw;
+  background-color: #0072b1;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 4rem;
+}
+
+.contactSection h1 {
+  text-align: center;
+  line-height: 2;
+  font-size: 2.5em;
+  color: beige;
+  font-weight: 600;
+}
+.contactSection h1 .span {
+  color: black;
+  font-style: oblique;
+}
+
+.form {
+  background-color: rgb(245, 245, 220, 0.9);
+  padding: 4rem 2rem;
+  border-radius: 1rem;
+  border: 3px solid black;
+  box-shadow: rgb(0, 0, 0, 0.4) 0 0 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  font-size: 1.3em;
+}
+.darkForm {
+  background-color: rgb(0, 0, 0, 0.3);
+  padding: 4rem 2rem;
+  border-radius: 1rem;
+  border: 3px solid beige;
+  box-shadow: rgb(0, 0, 0, 0.4) 0 0 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  font-size: 1.3em;
+}
+.form input,
+.form div {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 0.5em;
+  font-size: 1.5rem;
+}
+.darkForm input,
+.darkForm div {
+  background-color: rgb(245, 245, 220, 0.1);
+  border-radius: 0.5em;
+  font-size: 1.5rem;
+}
+
+.form textarea,
+.darkForm textarea {
+  font-size: 1.05em;
+}
+
+.form label[data-shrink="true"] {
+  color: #0072b1;
+  font-size: 1.1em;
+  font-weight: 500 !important;
+}
+.darkForm label[data-shrink="true"] {
+  color: beige;
+  font-size: 1.1em;
+  font-weight: 500 !important;
+}
+
+.form input::after,
+.form div::after {
+  border-bottom: 5px solid #0072b1;
+  font-size: 2em;
+  transition: all 400ms ease-in-out !important;
+}
+.darkForm input::after,
+.darkForm div::after {
+  border-bottom: 5px solid beige;
+  font-size: 2em;
+  transition: all 400ms ease-in-out !important;
+}
+
+.form input::before,
+.form div::before,
+.darkForm input::before,
+.darkForm div::before {
+  border-bottom: none;
+}
+
+.submitBtn {
+  padding: 11px 26px;
+  background: linear-gradient(180deg, #009aed 26.71%, #0072b1 99.36%);
+  color: #ffff;
+  border-radius: 34px;
+  border: 1px solid var(--primary);
+  box-shadow: var(--button-shadow);
+  font-size: 1.5em;
+  width: max-content;
+  cursor: pointer;
+}
+
+.submitBtn:hover {
+  background: #ffff;
+  color: var(--primary);
+  cursor: pointer;
+}
+
+.darkForm .submitBtn {
+  padding: 11px 26px;
+  background: #ffff;
+  color: var(--primary);
+  border-radius: 34px;
+  border: 1px solid var(--primary);
+  box-shadow: var(--button-shadow);
+  font-size: 1.5em;
+  width: max-content;
+  cursor: pointer;
+}
+
+.darkForm .submitBtn:hover {
+  background: linear-gradient(180deg, #009aed 26.71%, #0072b1 99.36%);
+
+  color: #ffff;
+  cursor: pointer;
+}

@@ -1,0 +1,22 @@
+.footer {
+  border-top: 3px solid black;
+  margin: 7rem auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  gap: 2em;
+}
+.footer a {
+  position: relative;
+  top: 1em;
+}
+.footer button {
+  color: beige;
+  border: none;
+  background-color: transparent;
+  font-size: 1.5em;
+  cursor: pointer;
+}
