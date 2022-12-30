@@ -26,7 +26,7 @@ export const PortfolioContextProvider: React.FC<
     }
     if (isOn) {
       setTheme("dark");
-      document.body.style.background = "	#36393e";
+      document.body.style.background = "#282b30";
     }
   }, [isOn, setIsOn, theme, setTheme]);
 
