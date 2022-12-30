@@ -1,8 +1,4 @@
-/* .cardContainer {
-  position: relative;
-  right: 10rem;
-  top: 8rem;
-} */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 .card {
   border: 1px solid black;
@@ -18,10 +14,12 @@
 .cardh5 {
   font-size: 1.8em !important;
   font-weight: 600 !important;
+  font-family: "Open Sans", sans-serif !important;
 }
 .cardP {
   font-size: 1.3em !important;
   font-weight: 500 !important;
+  font-family: "Open Sans", sans-serif !important;
 }
 /* @media screen and (max-width: 1250px) {
   .cardContainer {
