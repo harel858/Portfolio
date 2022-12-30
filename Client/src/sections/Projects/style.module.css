@@ -40,7 +40,7 @@
   align-self: center;
   flex-direction: column;
   justify-content: space-around;
-  gap: 1.5em;
+  gap: 3em;
 }
 .article div {
   max-width: 80vw !important;
