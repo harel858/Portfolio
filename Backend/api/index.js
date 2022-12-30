@@ -14,7 +14,6 @@ const port = process.env.PORT || 9000;
 const app = (0, express_1.default)();
 app.use(body_parser_1.default.json());
 app.use((0, cors_1.default)({
-    allowedHeaders: ["Content-Type"],
     origin: `${process.env.CLIENT}`,
 }));
 app.use("/", customers_1.default);

@@ -13,7 +13,6 @@ const app = express();
 app.use(bodyParser.json());
 app.use(
   cors({
-    allowedHeaders: ["Content-Type"],
     origin: `${process.env.CLIENT}`,
   })
 );

@@ -8,6 +8,10 @@ const registerUser_1 = require("../models/registerUser");
 const createCustomer_1 = __importDefault(require("../controllers/createCustomer"));
 const validator_1 = require("../validators/validator");
 const registerHandler = async (req, res) => {
+    res.set({
+        "Access-Control-Allow-Origin": "https://portfolio-six-pi-55.vercel.app",
+        "Access-Control-Allow-Headers": "Content-Type",
+    });
     try {
         const { name, email, message } = req.body;
         if (await createCustomer_1.default.getUserByEmail(email))
