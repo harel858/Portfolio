@@ -31,7 +31,10 @@ const registerHandler = async (req, res) => {
     }
     catch (err) {
         console.log(err);
-        return res.status(500).json(err);
+        return res
+            .setHeader("Access-Control-Allow-Headers", "Content-Type")
+            .status(500)
+            .json(err);
     }
 };
 exports.registerHandler = registerHandler;
