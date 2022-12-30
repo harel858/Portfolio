@@ -34,15 +34,21 @@ body {
   height: 5px;
   width: 10px;
   background: var(--background);
+  position: fixed;
+  z-index: 10;
 }
 
 ::-webkit-scrollbar-thumb {
   background: var(--accent);
   -webkit-border-radius: 1ex;
+  position: fixed;
+  z-index: 10;
 }
 
 ::-webkit-scrollbar-corner {
   background: var(--background);
+  position: fixed;
+  z-index: 10;
 }
 
 .main {
