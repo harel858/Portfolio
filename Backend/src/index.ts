@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.use(
   cors({
     allowedHeaders: ["Content-Type"],
-    origin: `${process.env.CLIENT}`,
+    origin: `*`,
   })
 );
 app.use("/", router);
