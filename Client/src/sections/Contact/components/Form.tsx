@@ -65,7 +65,6 @@ const Form: React.FC = () => {
     setMissingEmail(!emailRegex.test(email));
     const user = new User(name, email, message);
     const config = {
-      withCredentials: true,
       headers: {
         "Content-Type": "application/json",
       },
@@ -88,6 +87,7 @@ const Form: React.FC = () => {
       throw new Error(err);
     }
   };
+
   return (
     <Slide duration={800} direction="right">
       <form className={!isOn ? classes.form : classes.darkForm}>
