@@ -68,7 +68,7 @@
 }
 
 .motionCard {
-  padding: 4em 0em;
+  padding: 4em 0.4em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -80,7 +80,7 @@
 }
 
 .darkMotionCard {
-  padding: 4em 0em;
+  padding: 4em 0.4em;
   display: flex;
   align-items: center;
   justify-content: center;
