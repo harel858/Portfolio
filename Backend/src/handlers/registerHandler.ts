@@ -4,10 +4,10 @@ import controllers from "../controllers/createCustomer";
 import { validateUser } from "../validators/validator";
 
 export const registerHandler: RequestHandler = async (req, res) => {
-  res.set({
-    "Access-Control-Allow-Origin": "https://portfolio-six-pi-55.vercel.app",
-    "Access-Control-Allow-Headers": "Content-Type",
-  });
+  res.setHeader(
+    "Access-Control-Allow-Origin",
+    "https://portfolio-six-pi-55.vercel.app"
+  );
   try {
     const { name, email, message } = req.body as {
       name: string;
