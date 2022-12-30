@@ -1,15 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 .card {
-  border: 1px solid black;
+  background-color: beige;
+  border: 3px solid black;
   border-radius: 1em !important;
-  box-shadow: rgb(0, 0, 0, 0.6) 10px 20px 30px 3px !important;
+  box-shadow: rgb(0, 0, 0, 0.6) 10px 20px 3px 3px !important;
 }
 .darkCard {
-  background-color: beige;
-  border: 1px solid black !important;
+  background-color: beige !important;
+  border: 3px solid beige !important;
   border-radius: 1em !important;
-  box-shadow: rgb(245, 245, 220, 0.6) 10px 20px 30px 3px !important;
+  box-shadow: rgb(245, 245, 220, 0.3) 10px 20px 3px 3px !important;
 }
 .cardh5 {
   font-size: 1.8em !important;
