@@ -1,12 +1,14 @@
 import classes from "./style.module.css";
-import React from "react";
+import React, { useContext } from "react";
 import { TypeAnimation } from "react-type-animation";
 import CVBtn from "./components/CVBtn/CVBtn";
 import { Fade } from "react-awesome-reveal";
 import ProfileCard from "./components/card/ProfileCard";
 import Icons from "./components/icons/Icons";
+import PortfolioContext from "../../context/portfolioContext";
 
 const About: React.FC = () => {
+  const { isOn } = useContext(PortfolioContext);
   return (
     <section className={classes.aboutContainer}>
       <div className={classes.intro}>
@@ -32,12 +34,22 @@ const About: React.FC = () => {
             color: "#0072b1",
           }}
         />
-        <Fade className={classes.p} delay={0} cascade damping={0.02}>
+        <Fade
+          className={!isOn ? classes.p : classes.darkP}
+          delay={0}
+          cascade
+          damping={0.02}
+        >
           Versatile and tech-savvy professional with hand-on experience in
           Fullstack web development.
         </Fade>
 
-        <Fade className={classes.p} delay={0} cascade damping={0.02}>
+        <Fade
+          className={!isOn ? classes.p : classes.darkP}
+          delay={0}
+          cascade
+          damping={0.02}
+        >
           With a flair for writing elegant code, and delivering quality products
           according to customer needs.
         </Fade>

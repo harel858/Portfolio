@@ -28,6 +28,14 @@
   color: #788097 !important;
   white-space: inherit !important;
 }
+.intro .drakP {
+  text-align: justify !important;
+  font-size: clamp(1.2rem, 2vw, 1.5rem) !important;
+  font-weight: 500 !important;
+  max-width: clamp(40ch, 40vw, 60ch) !important;
+  color: rgb(255, 255, 255, 0.8) !important;
+  white-space: inherit !important;
+}
 @media screen and (max-width: 1050px) {
   .aboutContainer {
     flex-direction: column;
