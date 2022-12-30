@@ -13,10 +13,8 @@ const app = express();
 app.use(bodyParser.json());
 app.use(
   cors({
-    origin: [
-      "https://portfolio-iejqlnuz4-harel858.vercel.app",
-      "https://portfolio-harel858.vercel.app",
-    ],
+    credentials: true,
+    origin: `${process.env.CLIENT}`,
   })
 );
 app.use("/", router);
