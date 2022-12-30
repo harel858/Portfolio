@@ -88,7 +88,7 @@
   border: 2px solid rgb(245, 245, 220);
   border-radius: 20px;
   box-shadow: rgb(245, 245, 220, 0.2) 10px 10px 10px 10px;
-  transform-origin: 10% 60%;
+  transform-origin: center;
 }
 
 .cardContainer {
