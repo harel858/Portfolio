@@ -31,7 +31,7 @@
   color: #788097 !important;
   white-space: inherit !important;
 }
-.intro .drakP {
+.intro .darkP {
   text-align: justify !important;
   font-size: clamp(1.2rem, 2vw, 1.5rem) !important;
   font-weight: 500 !important;
