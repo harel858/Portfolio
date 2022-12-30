@@ -29,7 +29,11 @@ const ProfileCard: React.FC<{}> = () => {
             <Typography gutterBottom variant="h5" component="div">
               Harel Levi
             </Typography>
-            <Typography variant="body2" color="text.secondary">
+            <Typography
+              className={classes.cardP}
+              variant="body2"
+              color="text.secondary"
+            >
               Very pleasant, I'm Harel, 21 years old, from Rosh Ha'Ain, Central
               District. Bootcamp graduated and autodidact talented with passion
               for delivering elegant solutions.

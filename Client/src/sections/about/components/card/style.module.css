@@ -15,7 +15,10 @@
   border-radius: 1em !important;
   box-shadow: rgb(245, 245, 220, 0.6) 10px 20px 30px 3px !important;
 }
-
+.cardP {
+  font-size: 1.3em !important;
+  font-weight: 600 !important;
+}
 /* @media screen and (max-width: 1250px) {
   .cardContainer {
     position: relative;
