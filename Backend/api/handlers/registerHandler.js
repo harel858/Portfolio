@@ -27,10 +27,7 @@ const registerHandler = async (req, res) => {
         if (!newUser) {
             return res.status(500).json("error occurs");
         }
-        return res
-            .status(201)
-            .setHeader("Access-Control-Allow-Headers", "Content-Type")
-            .json(newUser);
+        return res.status(201).json(newUser);
     }
     catch (err) {
         console.log(err);
