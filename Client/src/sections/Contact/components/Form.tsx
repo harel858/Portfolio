@@ -119,6 +119,7 @@ const Form: React.FC = () => {
         <TextField
           id="outlined-textarea"
           label="Message"
+          className={classes.textarea}
           multiline
           variant="filled"
           onChange={(e) => setMessage(e.target.value)}
