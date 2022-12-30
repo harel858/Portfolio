@@ -1,5 +1,3 @@
-import dotenv from "dotenv";
-dotenv.config();
 import "./db/connectToDB";
 import express from "express";
 import router from "./routes/customers";
