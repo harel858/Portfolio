@@ -28,7 +28,7 @@ const App: React.FC = () => {
                   backgroundColor: `rgb(237, 234, 222)`,
                 }
               : {
-                  backgroundColor: `black`,
+                  backgroundColor: `	#36393e`,
                 }
           }
           speed={1}
@@ -42,7 +42,7 @@ const App: React.FC = () => {
             !isOn
               ? {
                   backgroundColor: `#0072b1`,
-                  borderTop: ` 1px solid black`,
+                  borderTop: ` 1px solid 	#36393e`,
                   borderBottom: `1px solid black`,
                   minHeight: `80rem`,
                 }
@@ -67,7 +67,7 @@ const App: React.FC = () => {
                   minHeight: `fit-content`,
                 }
               : {
-                  backgroundColor: `black`,
+                  backgroundColor: `	#36393e`,
                   minHeight: `fit-content`,
                 }
           }
@@ -82,8 +82,8 @@ const App: React.FC = () => {
             !isOn
               ? {
                   backgroundColor: `#0072b1`,
-                  borderTop: ` 1px solid black`,
-                  borderBottom: `1px solid black`,
+                  borderTop: ` 1px solid 	#36393e`,
+                  borderBottom: `1px solid 	#36393e`,
                   minHeight: `fit-content`,
                 }
               : {

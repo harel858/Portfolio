@@ -13,11 +13,11 @@ const About: React.FC = () => {
         <TypeAnimation
           sequence={[
             "<h1>Hi, My name is Harel!</h1>", // Types 'One'
-            2000, // Waits 1s
+            3000, // Waits 1s
             "<h1>I'm  A full stack Engineer</h1>", // Deletes 'One' and types 'Two'
-            2000, // Waits 2s
+            3000, // Waits 2s
             "<h1>Mainly using the MERN stack</h1>",
-            2000, // Types 'Three' without deleting 'Two'
+            3000, // Types 'Three' without deleting 'Two'
             /*   () => {
               console.log("Done typing!"); // Place optional callbacks anywhere in the array
             }, */
