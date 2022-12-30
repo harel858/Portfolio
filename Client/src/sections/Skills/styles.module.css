@@ -59,7 +59,7 @@
 }
 
 .motionCard {
-  width: 300px;
+  width: max-content;
   min-height: 25rem;
   display: flex;
   align-items: center;
