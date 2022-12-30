@@ -32,12 +32,12 @@
 .darkMotionCard h2 {
   font-size: 1.5em;
 
-  color: white;
+  color: rgb(255, 255, 255, 0.8) !important;
 }
 .darkMotionCard h4 {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 1.2em;
-  color: white;
+  color: rgb(255, 255, 255, 0.8) !important;
 }
 .motionCard .paragraph {
   text-align: center;
