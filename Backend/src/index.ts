@@ -13,7 +13,8 @@ const app = express();
 app.use(bodyParser.json());
 app.use(
   cors({
-    origin: `*`,
+    allowedHeaders: ["Content-Type"],
+    origin: `${process.env.CLIENT}`,
   })
 );
 app.use("/", router);
