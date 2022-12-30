@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
 .aboutContainer {
   padding: clamp(1rem, 4vw, 4rem);
   position: relative;
@@ -8,6 +10,7 @@
   flex-direction: row;
   justify-content: center;
   gap: 1em;
+  font-family: "Open Sans", sans-serif !important;
 }
 
 .intro {
