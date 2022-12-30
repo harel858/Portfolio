@@ -68,9 +68,7 @@
 }
 
 .motionCard {
-  padding: 0 1em;
-  width: max-content;
-  min-height: 28rem;
+  padding: 4em 0em;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -82,9 +80,7 @@
 }
 
 .darkMotionCard {
-  padding: 0 1em;
-  width: max-content;
-  height: 28rem;
+  padding: 4em 0em;
   display: flex;
   align-items: center;
   justify-content: center;
