@@ -28,7 +28,7 @@ const App: React.FC = () => {
                   backgroundColor: `rgb(237, 234, 222)`,
                 }
               : {
-                  backgroundColor: `	#36393e`,
+                  backgroundColor: `#282b30`,
                 }
           }
           speed={1}
@@ -67,7 +67,7 @@ const App: React.FC = () => {
                   minHeight: `fit-content`,
                 }
               : {
-                  backgroundColor: `	#36393e`,
+                  backgroundColor: `#282b30`,
                   minHeight: `fit-content`,
                 }
           }
