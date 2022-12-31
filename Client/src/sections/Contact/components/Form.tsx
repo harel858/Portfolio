@@ -66,9 +66,15 @@ const Form: React.FC = () => {
     const user = new User(name, email, message);
 
     try {
-      const result = await axios.post(`${import.meta.env.VITE_API_KEY}`, user);
+      const result = await fetch(`${import.meta.env.VITE_API_KEY}`, {
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          message: message,
+        }),
+      });
       console.log(result.status);
-      setNewUser(result.data);
+      setNewUser(result as unknown as User);
       setSuccessMessage(true);
     } catch (err: any) {
       err?.response?.data

@@ -27,6 +27,7 @@ const registerHandler = async (req, res) => {
         if (!newUser) {
             return res.status(500).json("error occurs");
         }
+        console.log(res);
         return res.status(201).json(newUser);
     }
     catch (err) {
