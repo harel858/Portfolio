@@ -10,8 +10,11 @@ const express_1 = __importDefault(require("express"));
 const customers_1 = __importDefault(require("./routes/customers"));
 const cors_1 = __importDefault(require("cors"));
 const body_parser_1 = __importDefault(require("body-parser"));
-const port = process.env.PORT || 9000;
 const app = (0, express_1.default)();
+app.use((0, cors_1.default)({
+    origin: `${process.env.CLIENT}`,
+}));
+const port = process.env.PORT || 9000;
 app.use(body_parser_1.default.json());
 /* app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
@@ -21,8 +24,5 @@ app.use(body_parser_1.default.json());
   next();
 });
  */
-app.use((0, cors_1.default)({
-    origin: `${process.env.CLIENT}`,
-}));
 app.use("/", customers_1.default);
 app.listen(port, () => console.log(`app is listening on port ${process.env.PORT}`));

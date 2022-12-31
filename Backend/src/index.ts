@@ -6,9 +6,13 @@ import router from "./routes/customers";
 import cors from "cors";
 import bodyParser from "body-parser";
 
-const port = process.env.PORT || 9000;
-
 const app = express();
+app.use(
+  cors({
+    origin: `${process.env.CLIENT}`,
+  })
+);
+const port = process.env.PORT || 9000;
 
 app.use(bodyParser.json());
 
@@ -20,11 +24,6 @@ app.use(bodyParser.json());
   next();
 });
  */
-app.use(
-  cors({
-    origin: `${process.env.CLIENT}`,
-  })
-);
 
 app.use("/", router);
 
