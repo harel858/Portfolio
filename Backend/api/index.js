@@ -23,8 +23,7 @@ app.use(body_parser_1.default.json());
  */
 app.use((0, cors_1.default)({
     origin: `${process.env.CLIENT}`,
-    allowedHeaders: `*`,
-    exposedHeaders: `*`,
+    exposedHeaders: ["Content-Type", "Access-Control-Allow-Headers"],
 }));
 app.use("/", customers_1.default);
 app.listen(port, () => console.log(`app is listening on port ${process.env.PORT}`));
