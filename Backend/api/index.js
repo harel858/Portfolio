@@ -23,7 +23,7 @@ app.use(body_parser_1.default.json());
  */
 app.use((0, cors_1.default)({
     origin: `*`,
-    exposedHeaders: ["Content-Type", "Access-Control-Allow-Headers"],
+    exposedHeaders: ["Content-Type", "Access-Control-Allow-Headers", "OPTIONS"],
     allowedHeaders: `*`,
     methods: `*`,
     preflightContinue: true,
