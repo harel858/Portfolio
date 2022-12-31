@@ -22,7 +22,9 @@ app.use(bodyParser.json());
  */
 app.use(
   cors({
-    origin: `*`,
+    origin: `${process.env.CLIENT}`,
+    allowedHeaders: `*`,
+    exposedHeaders: `*`,
   })
 );
 
