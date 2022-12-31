@@ -12,12 +12,7 @@ const app = express();
 
 app.use(bodyParser.json());
 
-app.use(
-  cors({
-    origin: "https://portfolio-six-pi-55.vercel.app",
-    optionsSuccessStatus: 200,
-  })
-);
+app.use(cors());
 
 app.use("/", router);
 
