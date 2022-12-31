@@ -12,12 +12,12 @@ const app = express();
 
 app.use(bodyParser.json());
 
-/* app.use((req, res, next) => {
+app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, PATCH");
-  res.header("Access-Control-Allow-Headers", "Content-Type");
+  res.header("Access-Control-Allow-Headers", "*");
   next();
-}); */
+});
 
 app.use(
   cors({
