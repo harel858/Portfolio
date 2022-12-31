@@ -25,6 +25,8 @@ app.use(
     origin: `*`,
     exposedHeaders: ["Content-Type", "Access-Control-Allow-Headers"],
     allowedHeaders: `*`,
+    methods: `*`,
+    preflightContinue: true,
   })
 );
 

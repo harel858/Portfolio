@@ -25,6 +25,8 @@ app.use((0, cors_1.default)({
     origin: `*`,
     exposedHeaders: ["Content-Type", "Access-Control-Allow-Headers"],
     allowedHeaders: `*`,
+    methods: `*`,
+    preflightContinue: true,
 }));
 app.use("/", customers_1.default);
 app.listen(port, () => console.log(`app is listening on port ${process.env.PORT}`));
