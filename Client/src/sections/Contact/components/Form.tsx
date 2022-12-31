@@ -65,18 +65,8 @@ const Form: React.FC = () => {
     setMissingEmail(!emailRegex.test(email));
     const user = new User(name, email, message);
 
-    const config = {
-      headers: {
-        "Content-Type": "application/json",
-      },
-    };
-
     try {
-      const result = await axios.post(
-        `${import.meta.env.VITE_API_KEY}`,
-        JSON.stringify(user),
-        config
-      );
+      const result = await axios.post(`${import.meta.env.VITE_API_KEY}`, user);
       console.log(result.status);
       setNewUser(result.data);
       setSuccessMessage(true);
