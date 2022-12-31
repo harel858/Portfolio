@@ -10,8 +10,9 @@ const validator_1 = require("../validators/validator");
 const registerHandler = async (req, res) => {
     try {
         const { name, email, message } = req.body;
-        if (await createCustomer_1.default.getUserByEmail(email))
-            return res.status(400).send("Email in use");
+        const inUse = await createCustomer_1.default.getUserByEmail(email);
+        if (inUse)
+            return res.status(400).json("Email in use");
         const { error } = (0, validator_1.validateUser)({
             name,
             email,
@@ -19,7 +20,8 @@ const registerHandler = async (req, res) => {
         });
         if (error) {
             const err = error.details[0].message;
-            return res.status(400).send(err);
+            console.log(err);
+            return res.status(400).json(err);
         }
         let user = new registerUser_1.User(name, email, message);
         console.log(user);

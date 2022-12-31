@@ -1,10 +1,9 @@
 import classes from "../style.module.css";
 import React from "react";
 import { Snackbar, TextField } from "@mui/material";
-import axios from "axios";
+/* import axios from "axios"; */
 import { motion } from "framer-motion";
 import { Slide } from "react-awesome-reveal";
-import { User } from "../../../models/registerModel";
 import MuiAlert, { AlertProps } from "@mui/material/Alert";
 import PortfolioContext from "../../../context/portfolioContext";
 
@@ -21,7 +20,6 @@ const Form: React.FC = () => {
   const [message, setMessage] = React.useState<any>("");
   const [missingName, setMissingName] = React.useState<boolean>(false);
   const [missingEmail, setMissingEmail] = React.useState<boolean>(false);
-  const [newUser, setNewUser] = React.useState<User>();
   const [registerError, setRegisterError] = React.useState<any>();
   const [successMessage, setSuccessMessage] = React.useState(false);
   const [errorMessage, setErrorMessage] = React.useState(false);
@@ -63,25 +61,29 @@ const Form: React.FC = () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     !name ? setMissingName(true) : setMissingName(false);
     setMissingEmail(!emailRegex.test(email));
-    const user = new User(name, email, message);
 
     try {
       const result = await fetch(`${import.meta.env.VITE_API_KEY}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           name: name,
           email: email,
           message: message,
         }),
       });
-      console.log(result.status);
-      setNewUser(result as unknown as User);
-      setSuccessMessage(true);
+      if (result.ok) {
+        setSuccessMessage(true);
+      } else {
+        const res = await result.json();
+
+        setRegisterError(res);
+        setErrorMessage(true);
+      }
     } catch (err: any) {
-      err?.response?.data
-        ? setRegisterError(err.response.data)
-        : setRegisterError(`error occurs, we on this...`);
+      console.log(err);
+      setRegisterError(`error occurs, we on this...`);
       setErrorMessage(true);
-      throw new Error(err);
     }
   };
 
@@ -156,7 +158,7 @@ const Form: React.FC = () => {
             sx={{ width: "100%" }}
           >
             {successMessage
-              ? `Thank you for submitting ${newUser?.name}!, check your Email inbox`
+              ? `Thank you for submitting ${name}!, check your Email inbox`
               : errorMessage && `${registerError}`}
           </Alert>
         </Snackbar>

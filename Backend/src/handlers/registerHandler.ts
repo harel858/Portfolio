@@ -5,23 +5,23 @@ import { validateUser } from "../validators/validator";
 
 export const registerHandler: RequestHandler = async (req, res) => {
   try {
-    const { name, email, message } = req.body as {
-      name: string;
-      email: string;
-      message: string;
-    };
+    const { name, email, message } = req.body;
 
-    if (await controllers.getUserByEmail(email))
-      return res.status(400).send("Email in use");
+    const inUse = await controllers.getUserByEmail(email);
+
+    if (inUse) return res.status(400).json("Email in use");
 
     const { error } = validateUser({
       name,
       email,
       message,
     });
+
     if (error) {
       const err = error.details[0].message;
-      return res.status(400).send(err);
+      console.log(err);
+
+      return res.status(400).json(err);
     }
 
     let user = new User(name, email, message);
