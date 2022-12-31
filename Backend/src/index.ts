@@ -24,6 +24,7 @@ app.use(
   cors({
     origin: `*`,
     exposedHeaders: ["Content-Type", "Access-Control-Allow-Headers"],
+    allowedHeaders: `*`,
   })
 );
 
