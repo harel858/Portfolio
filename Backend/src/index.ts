@@ -11,22 +11,13 @@ const port = process.env.PORT || 9000;
 const app = express();
 
 app.use(bodyParser.json());
+
 app.use(
   cors({
-    allowedHeaders: ["Content-Type"],
-    origin: `*`,
+    origin: "https://portfolio-six-pi-55.vercel.app",
+    optionsSuccessStatus: 200,
   })
 );
-
-app.use((req, res, next) => {
-  res.setHeader(
-    "Access-Control-Allow-Origin",
-    "https://portfolio-six-pi-55.vercel.app"
-  );
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
-  res.setHeader("Access-Control-Allow-Methods", "GET, POST, HEAD");
-  next();
-});
 
 app.use("/", router);
 

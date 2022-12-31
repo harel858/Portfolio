@@ -14,14 +14,8 @@ const port = process.env.PORT || 9000;
 const app = (0, express_1.default)();
 app.use(body_parser_1.default.json());
 app.use((0, cors_1.default)({
-    allowedHeaders: ["Content-Type"],
-    origin: `*`,
+    origin: "https://portfolio-six-pi-55.vercel.app",
+    optionsSuccessStatus: 200,
 }));
-app.use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "https://portfolio-six-pi-55.vercel.app");
-    res.setHeader("Access-Control-Allow-Headers", "Content-Type");
-    res.setHeader("Access-Control-Allow-Methods", "GET, POST, HEAD");
-    next();
-});
 app.use("/", customers_1.default);
 app.listen(port, () => console.log(`app is listening on port ${process.env.PORT}`));
