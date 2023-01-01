@@ -53,11 +53,7 @@ const Form: React.FC = () => {
     setErrorMessage(false);
   };
 
-  const submitHandler = async (
-    name: string,
-    email: string,
-    message: string
-  ) => {
+  const submitHandler = async () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     !name ? setMissingName(true) : setMissingName(false);
     setMissingEmail(!emailRegex.test(email));
@@ -136,7 +132,7 @@ const Form: React.FC = () => {
             },
           }}
           whileTap={{ scale: 0.9, type: "spring" }}
-          onClick={() => submitHandler(name, email, message)}
+          onClick={submitHandler}
         >
           Submit
         </motion.button>

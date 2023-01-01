@@ -18,3 +18,10 @@
   color: var(--primary);
   cursor: pointer;
 }
+
+@media screen and (max-width: 350px) {
+  .contactBtn {
+    font-size: 0.9em;
+    font-weight: 500;
+  }
+}

@@ -31,9 +31,8 @@ export const registerHandler: RequestHandler = async (req, res) => {
     if (!newUser) {
       return res.status(500).json("error occurs");
     }
-    console.log(res);
 
-    return res.status(201).json(newUser);
+    return res.status(204).end();
   } catch (err) {
     console.log(err);
     return res.status(500).json(err);
