@@ -1,10 +1,10 @@
 import dotenv from "dotenv";
 dotenv.config();
 import "./db/connectToDB";
-import express from "express";
+import express, { json } from "express";
 import router from "./routes/customers";
 import cors from "cors";
-import bodyParser from "body-parser";
+/* import bodyParser from "body-parser"; */
 
 const app = express();
 app.use(
@@ -12,9 +12,9 @@ app.use(
     origin: `${process.env.CLIENT}`,
   })
 );
-const port = process.env.PORT || 9000;
+const port = process.env.PORT || 5000;
 
-app.use(bodyParser.json());
+app.use(json());
 
 /* app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
