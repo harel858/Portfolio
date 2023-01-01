@@ -78,7 +78,7 @@ const Form: React.FC = () => {
       }
     } catch (err: any) {
       console.log(err);
-      setRegisterError(`error occurs, we on this...`);
+      setRegisterError(`error occurs, we on this..`);
       setErrorMessage(true);
     }
   };
