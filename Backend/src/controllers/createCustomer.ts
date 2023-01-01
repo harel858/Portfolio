@@ -1,7 +1,7 @@
 import RegisterModel from "../db/customerModel";
 import { User } from "../models/registerUser";
 
-const createCustomer = async (newUser: unknown) => {
+const createCustomer = async (newUser: any) => {
   try {
     if (isValid(newUser)) {
       const user = new RegisterModel(newUser);
@@ -14,7 +14,7 @@ const createCustomer = async (newUser: unknown) => {
   }
 };
 
-function isValid(newUser: unknown): newUser is User {
+function isValid(newUser: any): newUser is User {
   if (newUser !== null && typeof newUser === "object") {
     return true;
   }
