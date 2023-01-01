@@ -10,6 +10,7 @@ const app = express();
 app.use(
   cors({
     origin: `${process.env.CLIENT}`,
+    allowedHeaders: ["Content-Type"],
   })
 );
 const port = process.env.PORT || 5000;

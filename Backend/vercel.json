@@ -1,21 +1,18 @@
 {
   "version": 2,
+  "builds": [
+    {
+      "src": "src/*.ts",
+      "use": "@vercel/node-12",
+      "config": {
+        "outDir": "api"
+      }
+    }
+  ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/api/index.js"
-    }
-  ],
-  "builds": [
-    {
-      "src": "api/**/*.ts",
-      "use": "@vercel/node-12"
-    }
-  ],
-  "headers": [
-    {
-      "source": "*",
-      "headers": ["Content-Type", "Access-Control-Allow-Headers"]
+      "dest": "/api/$1"
     }
   ]
 }
