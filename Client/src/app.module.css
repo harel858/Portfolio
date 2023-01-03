@@ -24,12 +24,12 @@
   --background: var(--white);
   --accent: var(--blue);
 }
-body {
+/* body {
   margin: 0;
   height: 100%;
-  /*   overflow: hidden; */
-}
+     overflow: hidden; 
 
+ */
 ::-webkit-scrollbar {
   height: 5px;
   width: 10px;
