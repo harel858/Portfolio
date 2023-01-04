@@ -40,7 +40,7 @@ const About: React.FC = () => {
           cascade
           damping={0.02}
         >
-          Versatile and tech-savvy professional with hand-on experience in
+          Versatile and tech-savvy professional with hand on experience in
           Fullstack web development.
         </Fade>
 
