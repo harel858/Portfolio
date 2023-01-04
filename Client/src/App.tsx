@@ -19,7 +19,7 @@ const App: React.FC = () => {
         <NavBar currentRef={ref} />
       </div>
 
-      <Parallax ref={ref} pages={9}>
+      <Parallax ref={ref} pages={8}>
         <ParallaxLayer
           style={
             !isOn
