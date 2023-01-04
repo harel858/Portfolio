@@ -35,7 +35,7 @@ const cors_1 = __importDefault(require("cors"));
 /* import bodyParser from "body-parser"; */
 const app = (0, express_1.default)();
 app.use((0, cors_1.default)({
-    origin: [`${process.env.CLIENT}`, `${process.env.HEBREWCLIENT}`],
+    origin: `*`,
     allowedHeaders: ["Content-Type"],
 }));
 const port = process.env.PORT || 5000;
