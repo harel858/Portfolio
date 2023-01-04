@@ -72,7 +72,7 @@ const App: React.FC = () => {
           }
           speed={0.05}
           factor={1}
-          offset={4.8}
+          offset={4.1}
         >
           <Projects />
         </ParallaxLayer>
