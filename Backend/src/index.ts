@@ -9,7 +9,7 @@ import cors from "cors";
 const app = express();
 app.use(
   cors({
-    origin: `${process.env.CLIENT || process.env.HEBREWCLIENT}`,
+    origin: [`${process.env.CLIENT}`, `${process.env.HEBREWCLIENT}`],
     allowedHeaders: ["Content-Type"],
   })
 );
