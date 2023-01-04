@@ -32,7 +32,7 @@ const App: React.FC = () => {
           }
           speed={1}
           offset={0}
-          factor={2.5}
+          factor={1}
         >
           <About />
         </ParallaxLayer>
@@ -54,7 +54,7 @@ const App: React.FC = () => {
           }
           speed={0.05}
           factor={1}
-          offset={2.5}
+          offset={2}
         >
           <Skills />
         </ParallaxLayer>
