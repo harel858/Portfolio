@@ -5,6 +5,7 @@ import classes from "./style.module.css";
 import SocialLinks from "./components/SocialLinks/SocialLinks";
 import PortfolioContext from "../../context/portfolioContext";
 import { IParallax } from "@react-spring/parallax";
+import { Hamburger } from "./components/Hamburger/Hamburger";
 
 type currentRef = {
   currentRef: React.RefObject<IParallax>;
@@ -14,6 +15,7 @@ const NavBar: React.FC<currentRef> = (props: currentRef) => {
   const { isOn } = useContext(PortfolioContext);
   return (
     <nav className={!isOn ? classes.nav : classes.darkNav}>
+      <Hamburger currentRef={props.currentRef} />
       <SocialLinks />
       <div className={classes.btnContainer}>
         <ContactBtn currentRef={props.currentRef} />

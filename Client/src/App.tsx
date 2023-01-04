@@ -16,7 +16,6 @@ const App: React.FC = () => {
   return (
     <main className={classes.main}>
       <div className={classes.navbar}>
-        <Hamburger currentRef={ref} />
         <NavBar currentRef={ref} />
       </div>
 

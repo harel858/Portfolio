@@ -34,6 +34,7 @@ const sidebar = {
 export const Hamburger: React.FC<currentRef> = (props: currentRef) => {
   const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
+  const backgroundRef = useRef(null);
   const { height } = useDimensions(containerRef);
 
   return (
@@ -44,13 +45,22 @@ export const Hamburger: React.FC<currentRef> = (props: currentRef) => {
       custom={height}
       ref={containerRef}
     >
-      <motion.div className={classes.background} variants={sidebar} />
+      <motion.div
+        className={classes.background}
+        ref={backgroundRef}
+        variants={sidebar}
+      />
       <Navigation
+        backgroundRef={backgroundRef}
         isOpen={isOpen}
         toggle={() => toggleOpen()}
         currentRef={props.currentRef}
       />
-      <MenuToggle toggle={() => toggleOpen()} />
+      <MenuToggle
+        backgroundRef={backgroundRef}
+        isOpen={isOpen}
+        toggle={() => toggleOpen()}
+      />
     </motion.nav>
   );
 };

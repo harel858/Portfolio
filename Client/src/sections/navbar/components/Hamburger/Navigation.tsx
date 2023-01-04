@@ -8,6 +8,7 @@ type currentRef = {
   currentRef: React.RefObject<IParallax>;
   toggle: any;
   isOpen: boolean;
+  backgroundRef: React.RefObject<ItemObj>;
 };
 type ItemObj = [
   { section: string },
@@ -39,6 +40,7 @@ export const Navigation = (props: currentRef) => (
   >
     {itemsObj.map((item: {}, i: number) => (
       <MenuItem
+        backgroundRef={props.backgroundRef}
         toggle={() => props.toggle()}
         currentRef={props.currentRef}
         item={item}

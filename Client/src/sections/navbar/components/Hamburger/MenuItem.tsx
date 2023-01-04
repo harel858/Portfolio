@@ -8,6 +8,7 @@ type itemProps = {
   item: any;
   i: number;
   toggle: () => any;
+  backgroundRef: any;
 };
 
 const variants = {
@@ -37,6 +38,7 @@ export const MenuItem = (props: itemProps) => {
     if (props.i === 1) props.currentRef?.current?.scrollTo(2.4);
     if (props.i === 2) props.currentRef?.current?.scrollTo(4.7);
     if (props.i === 3) props.currentRef?.current?.scrollTo(6.95);
+    props.backgroundRef.current.style.position = "absolute";
     return props.toggle();
   };
 
