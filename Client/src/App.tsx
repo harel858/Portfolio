@@ -94,7 +94,7 @@ const App: React.FC = () => {
           }
           speed={0.5}
           factor={3}
-          offset={7}
+          offset={6.5}
         >
           <Contact />
           <Footer />
