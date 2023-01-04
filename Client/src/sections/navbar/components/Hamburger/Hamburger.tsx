@@ -57,6 +57,7 @@ export const Hamburger: React.FC<currentRef> = (props: currentRef) => {
         currentRef={props.currentRef}
       />
       <MenuToggle
+        containerRef={containerRef}
         backgroundRef={backgroundRef}
         isOpen={isOpen}
         toggle={() => toggleOpen()}

@@ -8,7 +8,7 @@ type itemProps = {
   item: any;
   i: number;
   toggle: () => any;
-  backgroundRef: any;
+  backgroundRef: React.RefObject<any>;
 };
 
 const variants = {

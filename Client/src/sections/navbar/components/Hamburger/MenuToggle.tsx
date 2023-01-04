@@ -5,6 +5,7 @@ type props = {
   toggle: () => any;
   backgroundRef: any;
   isOpen: any;
+  containerRef: React.RefObject<any>;
 };
 const Path = (
   props: JSX.IntrinsicAttributes &
@@ -24,15 +25,19 @@ export const MenuToggle: React.FC<props> = ({
   toggle,
   backgroundRef,
   isOpen,
+  containerRef,
 }) => {
   function toggleBackground() {
     if (isOpen)
-      setTimeout(
-        () => (backgroundRef.current.style.position = "absolute"),
-        1000
-      );
+      setTimeout(() => {
+        backgroundRef.current.style.position = "absolute";
+        containerRef.current.style.zIndex = "none";
+      }, 1000);
 
-    if (!isOpen) backgroundRef.current.style.position = "fixed";
+    if (!isOpen) {
+      backgroundRef.current.style.position = "fixed";
+      containerRef.current.style.zIndex = "9";
+    }
 
     toggle();
   }
