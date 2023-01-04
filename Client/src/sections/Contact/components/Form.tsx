@@ -150,7 +150,7 @@ const Form: React.FC = () => {
         >
           <Alert
             onClose={handleCloseSuccess}
-            severity="success"
+            severity={successMessage ? "success" : "error"}
             sx={{ width: "100%" }}
           >
             {successMessage
