@@ -17,10 +17,10 @@ const ShiftManager: React.FC = () => {
         <div className={classes.cardContent}>
           <h2 className={classes.cardTitle}>Shift Manager</h2>
           <p className={classes.cardBody}>
-            By far my biggest project, "Your Shift" tracks working hours and
-            calculates the monthly salary in real time with an automatic
-            calculation of income tax and overtime payments. you should
-            definitely check it out.
+            "Your Shift is a comprehensive app for tracking working hours and
+            salary. It calculates tax and overtime automatically, streamlining
+            payroll for employees and employers. Try it today and take control
+            of your working hours and earnings."
           </p>
           <div className={classes.btnContainer}>
             <a
