@@ -23,7 +23,7 @@ const ContactBtn: React.FC<currentRef> = (props: currentRef) => {
           },
         }}
         whileTap={{ scale: 0.9, type: "spring" }}
-        onClick={() => props.currentRef.current?.scrollTo(6.95)}
+        onClick={() => props.currentRef.current?.scrollTo(6.3)}
       >
         Contact
       </motion.button>
